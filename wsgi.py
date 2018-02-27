@@ -8,7 +8,7 @@ application = Flask(__name__)
 def hello():
     
     with open('/mnt/logfile', 'a+') as log:
-        log.write('Greetings from '+socket.gethostname()+' at ' + str(datetime.datetime.now()) + '\n')
+        log.write('Greetings from '+socket.gethostname()+' at ' + str(datetime.datetime.now()) + '<br /> \n')
         log.seek(0)
         data = log.read()
     
